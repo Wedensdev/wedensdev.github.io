@@ -22,9 +22,7 @@ import CustomCursor from "./Pages/CustomCursor/CustomCursor";
 function App() {
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 2000);
+    setLoader(false);
   }, []);
 
   return (
@@ -32,24 +30,29 @@ function App() {
       {loader && <Preloader />}
       <Router>
         <Routes>
-          <Route path="/" element={<HomeThree />} />
-          <Route path="/home-three" element={<HomeOne />} />
-          <Route path="/home-two" element={<HomeTwo />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services-details" element={<ServicesDetails />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio-two" element={<PortfolioTwo />} />
-          <Route path="/portfolio-three" element={<PortfolioThree />} />
-          <Route path="/portfolio-details" element={<PortfolioDetails />} />
+          <Route exact path="/" element={<HomeThree />} />
+          <Route exact path="/home-three" element={<HomeOne />} />
+          <Route exact path="/home-two" element={<HomeTwo />} />
+          <Route exact path="/about" element={<AboutPage />} />
+          <Route exact path="/services" element={<ServicesPage />} />
+          <Route exact path="/services-details" element={<ServicesDetails />} />
+          <Route exact path="/portfolio" element={<Portfolio />} />
+          <Route exact path="/portfolio-two" element={<PortfolioTwo />} />
+          <Route exact path="/portfolio-three" element={<PortfolioThree />} />
           <Route
+            exact
+            path="/portfolio-details"
+            element={<PortfolioDetails />}
+          />
+          <Route
+            exact
             path="/portfolio-details-two"
             element={<PortfolioDetailsTwo />}
           />
-          <Route path="/news" element={<NewsStandard />} />
-          <Route path="/news-details" element={<NewsDetails />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Error />} />
+          <Route exact path="/news" element={<NewsStandard />} />
+          <Route exact path="/news-details" element={<NewsDetails />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="*" element={<Error />} />
         </Routes>
       </Router>
       <ScrollTop />
