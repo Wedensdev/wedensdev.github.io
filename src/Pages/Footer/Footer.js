@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-scroll";
 const Footer = () => {
   return (
     <>
@@ -13,58 +12,86 @@ const Footer = () => {
                   <div className="footer__area-widget-about-social three">
                     <ul>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://facebook.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-facebook-f"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://twitter.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-twitter"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://behance.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-behance"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://linkedin.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-linkedin-in"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://basketball.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fal fa-basketball-ball"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://pinterest.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-pinterest-p"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                       <li>
-                        <Link to="">
+                        <a
+                          href="https://instagram.com"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <i className="fab fa-instagram"></i>
-                        </Link>{" "}
+                        </a>{" "}
                       </li>
                     </ul>
                   </div>
                   <div className="footer__area-widget-about-menu three">
                     <ul>
                       <li>
-                        <Link to="/">Home</Link>
+                        <Link to="home">HOME</Link>
                       </li>
                       <li>
-                        <Link to="/services">Services</Link>
+                        <Link to="about-me">ABOUT ME</Link>
                       </li>
                       <li>
-                        <Link to="/news">News</Link>
+                        <Link to="skills">SKILLS</Link>
                       </li>
                       <li>
-                        <Link to="/portfolio">Portfolio</Link>
+                        <Link to="portfolio">PORTFOLIO</Link>
                       </li>
                       <li>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="reivews">REVIEWS</Link>
                       </li>
                     </ul>
                   </div>
@@ -80,8 +107,8 @@ const Footer = () => {
             <div className="col-xl-12">
               <div className="copyright__area-left t-center">
                 <p>
-                  Copyright © 2023<a href="index.html"> ThemeOri</a> Website by
-                  Metier{" "}
+                  Copyright © 2023
+                  <a href="mailto:Wedensmortume@gmail.com"> Maxim</a>
                 </p>
               </div>
             </div>

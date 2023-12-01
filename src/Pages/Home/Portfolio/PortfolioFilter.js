@@ -92,7 +92,7 @@ const ProjectStyleTwoData = [
 const ProjectStyleTwoItem = ({ portfolio }) => {
   return (
     <>
-      <div className="col-xl-3 col-sm-6 col-md-4  portfolio-item mt-30">
+      <div className="col-xl-6 col-md-6  portfolio-item mt-30">
         <div className="portfolio__area-two-item">
           <img className="img__full" src={portfolio.image} alt="" />
           <div className="portfolio__area-two-item-content">
