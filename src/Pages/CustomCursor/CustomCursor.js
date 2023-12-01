@@ -28,6 +28,9 @@ const CustomCursor = () => {
           ".link",
           "span",
           "i",
+          "iframe",
+          "img",
+          "li",
         ]}
       />
     </div>

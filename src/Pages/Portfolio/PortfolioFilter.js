@@ -4,62 +4,107 @@ import { v4 as uuidv4 } from "uuid";
 const ProjectStyleTwoData = [
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-7.jpg",
-    category: "strategy",
-  },
-  {
-    id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-8.jpg",
+    image: "../../assets/img/portfolio/landing-page-ui.jpg",
+    language: "Landing Page UI",
+    description: "Treatment Center",
     category: "design",
   },
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-9.jpg",
+    image: "../../assets/img/portfolio/skin-appeal.png",
+    language: "React/Bootstrap 5",
+    description: "Skinappeal",
+    category: "design",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/business-dashboard.jpg",
+    language: "React/Bootstrap 5",
+    description: "Business Dashboard",
+    category: "marketing",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/restaurant-platform.jpg",
+    language: "Next/Tailwind Css",
+    description: "Restaurant Platform",
+    category: "design",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/fast-food-platform.jpg",
+    language: "React/Bootstrap 5",
+    description: "Fast Food Platform",
+    category: "design",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/e-commerce-dashboard.jpg",
+    language: "React/Node",
+    description: "Ecommerce Dashboard",
     category: "development",
   },
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-10.jpg",
-    category: "strategy",
+    image: "../../assets/img/portfolio/job-portal-webapp.jpg",
+    language: "Next/Sass",
+    description: "Job Portal Wepapp",
+    category: "development",
   },
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-11.jpg",
-    category: "design",
+    image: "../../assets/img/portfolio/visualization.jpg",
+    language: "Next/TypeScript",
+    description: "Visualization",
+    category: "development",
   },
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-12.jpg",
+    image: "../../assets/img/portfolio/social-media-manager.png",
+    language: "React/Material UI",
+    description: "Social Media Mangement",
+    category: "marketing",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/showcase.jpg",
+    language: "React/Bootstrap 5",
+    description: "Instant Showcase",
+    category: "marketing",
+  },
+  {
+    id: uuidv4(),
+    image: "../../assets/img/portfolio/e-learning.jpg",
+    language: "React/Styled Component",
+    description: "E-learning Portal",
     category: "branding",
   },
+
   {
     id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-13.jpg",
-    category: "development",
-  },
-  {
-    id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-14.jpg",
-    category: "marketing",
-  },
-  {
-    id: uuidv4(),
-    image: "../../assets/img/portfolio/portfolio-15.jpg",
-    category: "marketing",
+    image: "../../assets/img/portfolio/ads.jpg",
+    language: "React/Bootstrap 5",
+    description: "Ads Platform",
+    category: "branding",
   },
 ];
 
-const ProjectStyleTwoItem = ({ image }) => {
+const ProjectStyleTwoItem = ({ portfolio }) => {
   return (
     <>
-      <div className="col-xl-6 col-md-6 portfolio-item mt-30">
+      <div className="col-xl-3 col-sm-6 col-md-4  portfolio-item mt-30">
         <div className="portfolio__area-two-item">
-          <img className="img__full" src={image} alt="" />
+          <img className="img__full" src={portfolio.image} alt="" />
           <div className="portfolio__area-two-item-content">
-            <span>Photography</span>
-            <h4>
-              <Link to="/portfolio-details">Photography</Link>
-            </h4>
+            <span>{portfolio.language}</span>
+            <h5>
+              <Link
+                // to="/portfolio-details"
+                to="#"
+              >
+                {portfolio.description}
+              </Link>
+            </h5>
           </div>
         </div>
       </div>
@@ -96,8 +141,7 @@ const PortfolioFilter = () => {
         <div className="row">
           <div className="col-xl-12 mb-30">
             <div className="portfolio__area-two-title">
-              <span className="subtitle-one">Portfolio</span>
-              <h2>Create Portfolio</h2>
+              <h2>Portfolio</h2>
             </div>
             <div className="portfolio__area-two-btn">
               <CategoryBtn
@@ -124,12 +168,7 @@ const PortfolioFilter = () => {
                 label="Marketing"
                 handleSetCategory={setCategory}
               />
-              <CategoryBtn
-                className={category === "strategy" ? "active" : null}
-                name="strategy"
-                label="Strategy"
-                handleSetCategory={setCategory}
-              />
+
               <CategoryBtn
                 className={category === "branding" ? "active" : null}
                 name="branding"
@@ -142,8 +181,8 @@ const PortfolioFilter = () => {
         <div className="row">
           {projectStyleTwoItem.map(
             (item, length) =>
-              length <= "9" && (
-                <ProjectStyleTwoItem key={item.id} image={item.image} />
+              length <= "12" && (
+                <ProjectStyleTwoItem key={item.id} portfolio={item} />
               )
           )}
         </div>
